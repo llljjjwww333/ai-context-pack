@@ -31,7 +31,7 @@ describe("scanner ranking", () => {
       expect(paths.indexOf("src/index.ts")).toBeLessThan(paths.indexOf("README.md"));
       expect(paths.indexOf("src/index.ts")).toBeLessThan(paths.indexOf("package.json"));
     } finally {
-      await rm(cwd, { recursive: true, force: true });
+      await rm(cwd, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
     }
   });
 });
