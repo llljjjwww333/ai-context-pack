@@ -197,14 +197,26 @@ function rankImportantFiles(files: ScannedFile[]): ScannedFile[] {
 
 function scoreFile(file: ScannedFile): number {
   let score = 0;
-  score += file.reasons.length * 20;
-  score += file.symbols.length * 2;
+  const filePath = file.path.toLowerCase();
+  const isSource = /^src\//.test(filePath) && /\.(ts|tsx|js|jsx|py|go|rs|java|cs)$/.test(filePath);
+  const isEntrypoint = /(^|\/)(index|main|app|server|cli)\.(ts|tsx|js|jsx|py|go|rs)$/.test(filePath);
+  const isCoreImplementation = /src\/(scanner|detect|render|doctor|config|git|ai|index)/.test(filePath);
+  const isManifest = /(package\.json|pyproject\.toml|go\.mod|cargo\.toml|requirements\.txt)$/.test(filePath);
+  const isReadme = filePath.endsWith("readme.md");
+  const isConfig = filePath.includes("config") || /\.(config|rc)\.(ts|js|json|yaml|yml)$/.test(filePath);
+  const isTest = /(^|\/)(test|tests|__tests__)\//.test(filePath) || /\.(test|spec)\.(ts|tsx|js|jsx|py)$/.test(filePath);
+
+  score += file.reasons.length * 10;
+  score += Math.min(file.symbols.length * 4, 48);
   score += file.envVars.length * 3;
   score += file.todos.length * 4;
-  if (file.path.toLowerCase().includes("test")) score += 4;
-  if (file.path.toLowerCase().includes("config")) score += 8;
-  if (file.path.toLowerCase().endsWith("readme.md")) score += 30;
-  if (file.path.toLowerCase().endsWith("package.json")) score += 35;
+  if (isSource) score += 42;
+  if (isEntrypoint) score += 32;
+  if (isCoreImplementation) score += 24;
+  if (isConfig) score += 16;
+  if (isTest) score += 10;
+  if (isManifest) score += 26;
+  if (isReadme) score += 18;
   if (file.size > 0 && file.size < 50000) score += 2;
   return score;
 }

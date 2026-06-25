@@ -58,23 +58,11 @@ export function renderAgents(scan: RepoScan, options: RenderAgentsOptions = {}):
     lines.push("");
   }
 
-  if (scan.git.available || scan.git.changedFiles.length > 0) {
-    lines.push("## Git Context");
-    lines.push("");
-    if (scan.git.branch) lines.push(`- Current branch when generated: \`${scan.git.branch}\``);
-    if (scan.git.changedFiles.length > 0) {
-      lines.push("- Current changed files when generated:");
-      for (const file of scan.git.changedFiles.slice(0, 24)) lines.push(`  - \`${file}\``);
-    } else {
-      lines.push("- No changed files were detected when this file was generated.");
-    }
-    lines.push("");
-  }
-
   lines.push("## Agent Working Agreements");
   lines.push("");
   lines.push("- Prefer existing project patterns and dependencies before adding new ones.");
   lines.push("- Run the smallest relevant validation command after changing code.");
+  lines.push("- For current Git diff context, run `ai-context-pack diff` instead of relying on this durable instructions file.");
   lines.push("- If a command or setup step is missing, update this file or the README with the discovered workflow.");
   lines.push("- Keep generated context files such as `AI_CONTEXT.md` out of source control unless the project explicitly wants them committed.");
   lines.push("");

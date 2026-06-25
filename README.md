@@ -5,9 +5,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/ai-context-pack"><img alt="npm" src="https://img.shields.io/npm/v/ai-context-pack?color=0f766e"></a>
-  <a href="https://www.npmjs.com/package/ai-context-pack"><img alt="npm downloads" src="https://img.shields.io/npm/dm/ai-context-pack"></a>
+  <img alt="Release" src="https://img.shields.io/badge/release-0.1.0-0f766e">
+  <img alt="npm ready" src="https://img.shields.io/badge/npm-publish--ready-cb3837">
   <a href="https://github.com/llljjjwww333/ai-context-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/llljjjwww333/ai-context-pack/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.7-3178C6">
   <img alt="Node" src="https://img.shields.io/badge/node-%3E%3D20-339933">
   <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
