@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.ai-context/
+AI_CONTEXT*.md
+ai-context*.html
+*.log

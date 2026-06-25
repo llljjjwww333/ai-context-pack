@@ -1,0 +1,21 @@
+<svg width="920" height="420" viewBox="0 0 920 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI Context Pack terminal demo</title>
+  <desc id="desc">A terminal demo showing ai-context-pack agents, doctor, and scan commands.</desc>
+  <rect width="920" height="420" rx="18" fill="#0F172A"/>
+  <rect x="1" y="1" width="918" height="418" rx="18" stroke="#334155" stroke-width="2"/>
+  <rect x="0" y="0" width="920" height="48" rx="18" fill="#111827"/>
+  <circle cx="28" cy="24" r="7" fill="#EF4444"/>
+  <circle cx="52" cy="24" r="7" fill="#F59E0B"/>
+  <circle cx="76" cy="24" r="7" fill="#10B981"/>
+  <text x="112" y="30" fill="#CBD5E1" font-family="Consolas, Menlo, monospace" font-size="15">ai-context-pack demo</text>
+  <text x="32" y="86" fill="#22C55E" font-family="Consolas, Menlo, monospace" font-size="18">$ ai-context-pack agents --write</text>
+  <text x="32" y="118" fill="#E2E8F0" font-family="Consolas, Menlo, monospace" font-size="17">Wrote AGENTS.md</text>
+  <text x="32" y="166" fill="#22C55E" font-family="Consolas, Menlo, monospace" font-size="18">$ ai-context-pack doctor</text>
+  <text x="32" y="198" fill="#E2E8F0" font-family="Consolas, Menlo, monospace" font-size="17">AI agent readiness: ready (88/100)</text>
+  <text x="32" y="230" fill="#94A3B8" font-family="Consolas, Menlo, monospace" font-size="16">[PASS] README.md is present.</text>
+  <text x="32" y="258" fill="#94A3B8" font-family="Consolas, Menlo, monospace" font-size="16">[PASS] AGENTS.md is present for Codex instructions.</text>
+  <text x="32" y="306" fill="#22C55E" font-family="Consolas, Menlo, monospace" font-size="18">$ ai-context-pack scan</text>
+  <text x="32" y="338" fill="#E2E8F0" font-family="Consolas, Menlo, monospace" font-size="17">Wrote AI_CONTEXT.md</text>
+  <text x="32" y="366" fill="#E2E8F0" font-family="Consolas, Menlo, monospace" font-size="17">Wrote ai-context.html</text>
+  <text x="32" y="394" fill="#E2E8F0" font-family="Consolas, Menlo, monospace" font-size="17">Detected stack: Node.js, TypeScript</text>
+</svg>

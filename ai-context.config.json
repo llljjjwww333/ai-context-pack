@@ -1,0 +1,57 @@
+{
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules/**",
+    ".git/**",
+    "dist/**",
+    "build/**",
+    ".next/**",
+    "coverage/**",
+    ".turbo/**",
+    ".vercel/**",
+    ".ai-context/**",
+    "AI_CONTEXT*.md",
+    "ai-context*.html",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+    "*.gif",
+    "*.webp",
+    "*.ico",
+    "*.pdf",
+    "*.zip",
+    "*.tar",
+    "*.gz",
+    "*.7z",
+    "*.exe",
+    "*.dll"
+  ],
+  "maxFileBytes": 120000,
+  "output": {
+    "markdown": "AI_CONTEXT.md",
+    "html": "ai-context.html",
+    "cache": ".ai-context/cache.json",
+    "agents": "AGENTS.md"
+  },
+  "agents": {
+    "maxBytes": 32768,
+    "linkContext": true
+  },
+  "model": {
+    "enabled": true,
+    "baseUrl": "https://api.openai.com/v1",
+    "apiKeyEnv": "OPENAI_API_KEY",
+    "name": "gpt-4.1-mini",
+    "maxInputChars": 24000
+  },
+  "sections": {
+    "tree": true,
+    "scripts": true,
+    "dependencies": true,
+    "git": true,
+    "todos": true,
+    "files": true
+  }
+}

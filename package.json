@@ -1,0 +1,58 @@
+{
+  "name": "ai-context-pack",
+  "version": "0.1.0",
+  "description": "Generate Codex-ready AGENTS.md instructions, context packs, and readiness checks for repositories.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ai-context-pack": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "ai-context.config.example.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "ai",
+    "context-engineering",
+    "codex",
+    "agents-md",
+    "coding-agent",
+    "cli",
+    "developer-tools",
+    "llm"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/llljjjwww333/ai-context-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/llljjjwww333/ai-context-pack/issues"
+  },
+  "homepage": "https://github.com/llljjjwww333/ai-context-pack#readme",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.9"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
